@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_anchorGravity="center_vertical|fill_vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CreateLogbookActivity"
+    tools:showIn="@layout/activity_create_logbook">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constrainedWidth="true"
+            tools:ignore="MissingConstraints">
+
+            <!--TextView
+                android:id="@+id/tvLogbookNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/szLogbookName" /-->
+
+
+            <EditText
+                android:id="@+id/etLogbookname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLength="20"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp"
+                android:hint="@string/szHintsNameForNewLogbook" />
+
+            <TextView
+                android:id="@+id/tvLogbooknameCnt20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="-4dp"
+                android:maxLines="1"
+                android:text="@string/szXy"
+                tools:ignore="HardcodedText" />
+
+            <!--View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/design_default_color_primary"
+                tools:visibility="gone" / -->
+
+            <TextView
+                android:id="@+id/tvTypeChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:text="@string/szTypeChoice" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbNumericalVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/szRbChooseNumeric"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rbTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/szRbChooseTime"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rbText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/szRbChooseText"
+                    tools:layout_editor_absoluteX="16dp" />
+
+            </RadioGroup>
+
+
+            <!--View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/design_default_color_primary"
+                tools:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/cbCommentLine1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add a field for a comment "
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="238dp"
+                tools:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/cbCommentLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="comment line 2"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="290dp" / -->
+
+            <!--View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="?android:attr/listDivider"
+                tools:visibility="gone" / -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbOption1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/szOption1"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="334dp" />
+
+                <EditText
+                    android:id="@+id/etOptionCb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvOpt1Cnt20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="-4dp"
+                android:layout_marginBottom="-10dp"
+                android:maxLines="1"
+                android:text="@string/szXy"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbOption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/szOption2" />
+
+                <EditText
+                    android:id="@+id/etOptionCb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:maxLength="20" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvOpt2Cnt20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="-4dp"
+                android:maxLines="1"
+                android:text="@string/szXy"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btCreateLogbook"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="12dp"
+                android:text="@string/szCreate" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
