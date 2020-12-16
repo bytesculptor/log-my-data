@@ -4,23 +4,22 @@ import android.app.DialogFragment;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.bytesculptor.logmydata.database.DbHandler;
 import com.bytesculptor.logmydata.dialogs.DialogLogbookDelete;
 import com.bytesculptor.logmydata.dialogs.DialogLogbookRename;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.util.Log;
-import android.view.ContextMenu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -91,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements DialogLogbookDele
             Log.d(TAG, "LoadBlockNameList: null excepetion " + e.toString());
             return null;
         }
+        cursor.moveToFirst();
         long bla = cursor.getLong(cursor.getColumnIndex(DbHandler._ID));
         logbookL.clear();
         while (cursor.moveToNext()) {
